@@ -1,0 +1,122 @@
+@import "./variables.scss";
+
+.label-custom {
+  @include fontDefault;
+  font-weight: bold;
+}
+.row-format {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.home-container {
+  margin-top: 20px;
+  border: 1px solid $black;
+  padding: 0 !important;
+
+  .task-form-container {
+    border-right: 1px solid $black;
+    padding: 2rem;
+  }
+  .to-do-container {
+    position: relative;
+    padding: 2rem;
+    padding-bottom: 5rem;
+
+    .bulk-action-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      background-color: #e0e0e0;
+      width: 100%;
+      height: 80px;
+      @include fontDefault;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      border-top: 1px solid $black;
+    }
+  }
+
+  .label-task {
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  .btn-add {
+    color: $white;
+    background-color: $btn-add-color;
+    width: 100%;
+    margin-top: 3rem;
+    border: none;
+    box-shadow: none;
+    &:hover {
+      background-color: $btn-add-color;
+    }
+  }
+
+  .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid $black;
+    padding: 0.8rem 1rem;
+
+    .task-title {
+      margin-left: 1rem;
+    }
+  }
+  .btn-action {
+    display: flex;
+  }
+  .btn-detail {
+    background-color: $btn-detail-color;
+    margin-right: 1rem;
+  }
+  .btn-remove {
+    background-color: $btn-remove-color;
+  }
+
+  .btn-detail,
+  .btn-remove {
+    cursor: pointer;
+    width: 80px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    color: $white;
+    border-radius: 5px;
+    text-align: center;
+    @include fontDefault;
+  }
+
+  .task-item-container {
+    padding: 10px 5px 0 5px;
+    margin-top: 0.8rem;
+
+    &:last-child {
+      margin-bottom: 8rem;
+    }
+
+    .task-edit {
+      padding: 1rem;
+      border: 1px solid $black;
+      border-top: none;
+    }
+  }
+
+  .datepicker-custom {
+    width: 100%;
+    text-align: left;
+    box-shadow: none;
+  }
+  .error-handler {
+    margin-bottom: 0;
+    @include fontDefault;
+  }
+  .description {
+    height: 120px;
+  }
+}

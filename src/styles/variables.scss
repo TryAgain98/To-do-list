@@ -1,0 +1,29 @@
+$btn-detail-color: #00bcd4;
+$btn-remove-color: #d9534f;
+$btn-add-color: #4caf50;
+$white: #fff;
+$black: black;
+
+@mixin fontDefault {
+  font-size: 14px;
+}
+
+@mixin fontDefaultMobile {
+  font-size: 12px;
+}
+
+$mobile-width: 576px;
+$tablet-width: 768px;
+
+
+@mixin mobile {
+  @media (max-width: $mobile-width) {
+      @content;
+  }
+}
+
+@mixin table {
+  @media (max-width: $tablet-width - 1px) {
+    @content;
+  }
+}
