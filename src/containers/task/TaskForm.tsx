@@ -1,11 +1,11 @@
-import React, { FC, useState } from "react"
+import React, { FC } from "react"
 import DatePicker from "react-datepicker";
 import Select from 'react-select';
 import { Input, Label, Row, Col, Button } from "reactstrap"
 import { Formik } from 'formik';
 import * as yup from "yup"
 
-import { DefaultOption, Task, TaskError } from "../../types/types"
+import { DefaultOption, Task } from "../../types/types"
 import { CustomDatePicker } from "../../components/CustomDatePicker"
 import ErrorHandler from "../../components/ErrorHandler"
 

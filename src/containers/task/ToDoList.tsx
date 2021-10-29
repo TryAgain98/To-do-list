@@ -16,7 +16,7 @@ interface Props {
 const ToDoList: FC<Props> = ({ search, setSearch, taskList, setTaskList }) => {
 
     const onChangeTaskToggle = (task: Task) => {
-        var index = taskList.findIndex((t) => t.id == task.id)
+        var index = taskList.findIndex((t) => t.id === task.id)
         if (index > -1) {
             setTaskList([
                 ...taskList.slice(0, index),
@@ -27,7 +27,7 @@ const ToDoList: FC<Props> = ({ search, setSearch, taskList, setTaskList }) => {
     }
 
     const updateTask = (task: Task) => {
-        var index = taskList.findIndex((t) => t.id == task.id)
+        var index = taskList.findIndex((t) => t.id === task.id)
         if (index > -1) {
             const newTasks = [
                 ...taskList.slice(0, index),
@@ -40,7 +40,7 @@ const ToDoList: FC<Props> = ({ search, setSearch, taskList, setTaskList }) => {
     }
 
     const deleteTask = (task: Task) => {
-        var index = taskList.findIndex((t) => t.id == task.id)
+        var index = taskList.findIndex((t) => t.id === task.id)
         if (index > -1) {
             const newTasks = [
                 ...taskList.slice(0, index),
@@ -60,7 +60,7 @@ const ToDoList: FC<Props> = ({ search, setSearch, taskList, setTaskList }) => {
     }
 
     const onChangeTaskCheck = (task: Task, checked: boolean) => {
-        var index = taskList.findIndex((t) => t.id == task.id)
+        var index = taskList.findIndex((t) => t.id === task.id)
         if (index > -1) {
             setTaskList([
                 ...taskList.slice(0, index),
@@ -106,8 +106,8 @@ const ToDoList: FC<Props> = ({ search, setSearch, taskList, setTaskList }) => {
                 }
             }} />
             {
-                !!taskList && taskList.map((task, index) => (
-                    <div key={index} className="task-item-container">
+                !!taskList && taskList.map((task) => (
+                    <div key={task.id} className="task-item-container">
                         <div className="task-item">
                             <div>
                                 <Input
